@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
             lungPower += x;
         }
 
-        if (Input.GetButtonUp("Jump"))
+        if (Input.GetButtonUp("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(jumpingPower, jumpingPower);
             jumpingPower = 0;
