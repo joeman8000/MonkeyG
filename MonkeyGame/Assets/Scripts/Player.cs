@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private float horizontal;
-    private float speed = 8f;
     private float jumpingPower;
     private float lungPower;
     public float y = .04f;
