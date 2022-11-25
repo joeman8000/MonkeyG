@@ -682,6 +682,7 @@ GameObject:
   - component: {fileID: 700391111}
   - component: {fileID: 700391112}
   - component: {fileID: 700391113}
+  - component: {fileID: 700391114}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -705,8 +706,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -714,14 +715,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.027778013, y: 0.1256569}
-      - {x: -0.07777801, y: 0.043233126}
-      - {x: -0.07979819, y: -0.097677104}
-      - {x: -0.06191928, y: -0.12171746}
-      - {x: 0.05797982, y: -0.119697265}
-      - {x: 0.079798184, y: -0.09767712}
-      - {x: 0.07171747, y: 0.06383854}
-      - {x: 0.029798191, y: 0.1276771}
+    - - {x: -0.1491922, y: 0.8803955}
+      - {x: -0.31404415, y: 0.66671276}
+      - {x: -0.35544202, y: 0.26984772}
+      - {x: -0.124267645, y: 0.016104393}
+      - {x: 0.17611289, y: 0.0049986914}
+      - {x: 0.3915381, y: 0.5979949}
+      - {x: 0.26204273, y: 0.8152956}
+      - {x: 0.10199039, y: 0.87257123}
 --- !u!212 &700391108
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -763,7 +764,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 857951c0fd8ea434c9c774e4eff5c651, type: 3}
+  m_Sprite: {fileID: -1045008248, guid: ba88b5bba119b114391a7c6920af22f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -804,7 +805,7 @@ Transform:
   m_GameObject: {fileID: 700391106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.98, y: -0.7179556, z: 0.036899365}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2098789879}
@@ -826,6 +827,7 @@ MonoBehaviour:
   y: 0.04
   x: 0.03
   wind: 0.025
+  monkey: {fileID: 700391114}
   rb: {fileID: 700391109}
   groundCheck: {fileID: 2098789879}
   groundLayer:
@@ -862,6 +864,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Myscore: {fileID: 1959121362}
+--- !u!95 &700391114
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700391106}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fe981a8630a4d374b9ed10996d789ac3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &897216456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,7 +1674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098789878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.117, z: 0}
+  m_LocalPosition: {x: 0, y: -0.005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

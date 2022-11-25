@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public float y = .04f;
     public float x = .01f;
     public float wind = 4f;
+    public Animator monkey;
 
 
     [SerializeField] private Rigidbody2D rb;
@@ -25,6 +26,10 @@ public class Player : MonoBehaviour
         if(!IsGrounded())
         {
         rb.velocity = new Vector2(rb.velocity.x - wind, rb.velocity.y);
+        monkey.SetBool("InAir", true);
+        }
+        if(IsGrounded()){
+            monkey.SetBool("InAir", false);
         }
         if(IsGrounded() && rb.velocity.y < 0)
         {
@@ -35,6 +40,7 @@ public class Player : MonoBehaviour
         {
             jumpingPower += y;
             lungPower += x;
+            monkey.SetBool("Charging", true);
         }
 
         if (Input.GetButtonUp("Jump") && IsGrounded())
@@ -42,6 +48,7 @@ public class Player : MonoBehaviour
             rb.velocity = new Vector2(jumpingPower, 10);
             jumpingPower = 0;
             lungPower = 0;
+            monkey.SetBool("Charging", false);
         }
         if(transform.position.y < -3)
         {
