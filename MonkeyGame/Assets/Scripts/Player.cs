@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     private float lungPower;
     public float y = .04f;
     public float x = .01f;
+    public float wind = 4f;
 
 
     [SerializeField] private Rigidbody2D rb;
@@ -20,6 +21,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!IsGrounded())
+        {
+        rb.velocity = new Vector2(rb.velocity.x - wind, rb.velocity.y);
+        }
         if(IsGrounded() && rb.velocity.y < 0)
         {
             rb.velocity = new Vector2(0, 0);
@@ -33,7 +38,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonUp("Jump") && IsGrounded())
         {
-            rb.velocity = new Vector2(jumpingPower, jumpingPower);
+            rb.velocity = new Vector2(jumpingPower, 10);
             jumpingPower = 0;
             lungPower = 0;
         }

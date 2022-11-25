@@ -514,7 +514,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   y: 0.04
-  x: 0.01
+  x: 0.03
+  wind: 0.025
   rb: {fileID: 700391109}
   groundCheck: {fileID: 2098789879}
   groundLayer:
