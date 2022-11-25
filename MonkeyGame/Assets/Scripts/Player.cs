@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public float x = .01f;
     public float wind = 4f;
     public Animator monkey;
+    public ParticleSystem jumppart;
+    public GameObject jumpobj;
 
 
     [SerializeField] private Rigidbody2D rb;
@@ -41,6 +43,7 @@ public class Player : MonoBehaviour
             jumpingPower += y;
             lungPower += x;
             monkey.SetBool("Charging", true);
+            jumpobj.transform.position = new Vector2(transform.position.x, transform.position.y);
         }
 
         if (Input.GetButtonUp("Jump") && IsGrounded())
@@ -49,6 +52,7 @@ public class Player : MonoBehaviour
             jumpingPower = 0;
             lungPower = 0;
             monkey.SetBool("Charging", false);
+            jumppart.Play();
         }
         if(transform.position.y < -3)
         {
