@@ -9,16 +9,20 @@ public class EPressRestart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoretext.text = "Score : " + TotalScore.totalscore;
+        int extrascore = TotalScore.totalscor;
+        scoretext.text = "Score : " + extrascore;
+        Debug.Log(TotalScore.totalscor);
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoretext.text = "Score : " + TotalScore.totalscore;
+        
         if (Input.GetButton("Jump"))
         {
+            TotalScore.totalscor = 0;
             SceneManager.LoadScene(sceneBuildIndex: 0);
         }
+        
     }
 }

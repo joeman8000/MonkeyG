@@ -10,7 +10,7 @@ public class Score : MonoBehaviour
     void Start()
     {
         num = 0;
-        TotalScore.totalscore = 0;
+        //TotalScore.totalscor = 0;
         //Myscore.text = "Score : " +num;
     }
 
@@ -19,9 +19,10 @@ public class Score : MonoBehaviour
         if(ScoreBox.tag == "Scoring")
         {
             num+=1;
-            TotalScore.totalscore+=1;
+            TotalScore.totalscor+=1;
             Destroy(ScoreBox.gameObject);
-            Myscore.text = "Score : " +num;
+            Myscore.text = "Score : " + TotalScore.totalscor;
+            Debug.Log(TotalScore.totalscor);
         }
     }
 
