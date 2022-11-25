@@ -9,8 +9,8 @@ public class Player : MonoBehaviour
     private float jumpingPower;
     private float lungPower;
     public float y = .04f;
-    public float x = .01f;
-    public float wind = 4f;
+    public float x = .12f;
+    public float wind = .05f;
     public Animator monkey;
     public ParticleSystem jumppart;
     public GameObject jumpobj;
@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     {
         if(!IsGrounded())
         {
-        rb.velocity = new Vector2(rb.velocity.x - wind, rb.velocity.y);
+        rb.velocity = new Vector2(rb.velocity.x - (wind * 2), rb.velocity.y);
         monkey.SetBool("InAir", true);
         }
         if(IsGrounded()){
@@ -50,14 +50,14 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonUp("Jump") && IsGrounded())
         {
-            rb.velocity = new Vector2(jumpingPower, 10);
+            rb.velocity = new Vector2(jumpingPower*3, 10);
             jumpingPower = 0;
             lungPower = 0;
             monkey.SetBool("Charging", false);
             jumppart.Play();
             Destroy(holde);
         }
-        if(transform.position.y < -10)
+        if(transform.position.y < -5)
         {
             SceneManager.LoadScene(sceneBuildIndex: 1);
         }

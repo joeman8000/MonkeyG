@@ -383,7 +383,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -409,7 +409,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -953,8 +953,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   y: 0.04
-  x: 0.03
-  wind: 0.025
+  x: 2
+  wind: 0.05
   monkey: {fileID: 700391114}
   jumppart: {fileID: 607878528}
   jumpobj: {fileID: 607878526}
@@ -1106,8 +1106,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897216456}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -0.0188, y: 0.0249, z: 1}
-  m_LocalScale: {x: 2.0345318, y: 1, z: 1.012534}
+  m_LocalPosition: {x: -0.0438, y: -0.0251, z: 1}
+  m_LocalScale: {x: 2.499977, y: 1, z: 1.2728015}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
