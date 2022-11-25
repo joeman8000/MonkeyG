@@ -102,6 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7997333092883092027}
   - component: {fileID: 7997333092883092026}
+  - component: {fileID: 7140028283992141285}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Scoring
@@ -150,6 +151,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.2390556, y: 0.6450351}
   m_EdgeRadius: 0
+--- !u!114 &7140028283992141285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7997333092883092020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e510ca1503a4a47468577fbcb03c2949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Myscore: {fileID: 0}
 --- !u!1 &7997333094118502296
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,6 +175,7 @@ GameObject:
   - component: {fileID: 7997333094118502303}
   - component: {fileID: 7997333094118502301}
   - component: {fileID: 7997333094118502302}
+  - component: {fileID: 3034954}
   m_Layer: 6
   m_Name: TreeDev (1)
   m_TagString: Untagged
@@ -261,3 +276,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.37485686, y: 1.0851295}
   m_EdgeRadius: 0
+--- !u!95 &3034954
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7997333094118502296}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aef57d9a4a65fe0499754b07b14c618f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
