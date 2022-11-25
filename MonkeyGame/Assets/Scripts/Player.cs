@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -41,6 +42,10 @@ public class Player : MonoBehaviour
             rb.velocity = new Vector2(jumpingPower, 10);
             jumpingPower = 0;
             lungPower = 0;
+        }
+        if(transform.position.y < -3)
+        {
+            SceneManager.LoadScene(sceneBuildIndex: 1);
         }
 
     }
