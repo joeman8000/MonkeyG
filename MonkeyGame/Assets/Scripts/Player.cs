@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Player : MonoBehaviour
     public Animator monkey;
     public ParticleSystem jumppart;
     public GameObject jumpobj;
+    public Text holde;
 
 
     [SerializeField] private Rigidbody2D rb;
@@ -53,6 +55,7 @@ public class Player : MonoBehaviour
             lungPower = 0;
             monkey.SetBool("Charging", false);
             jumppart.Play();
+            Destroy(holde);
         }
         if(transform.position.y < -10)
         {
