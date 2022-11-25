@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
             monkey.SetBool("Charging", false);
             jumppart.Play();
         }
-        if(transform.position.y < -3)
+        if(transform.position.y < -10)
         {
             SceneManager.LoadScene(sceneBuildIndex: 1);
         }
